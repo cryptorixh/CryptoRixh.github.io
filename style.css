@@ -1,120 +1,36 @@
-:root {
-    --primary: #2a2a2a;
-    --secondary: #1a1a1a;
-    --accent: #00ff9d;
-    --text: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
+/* Dark futuristic body style */
 body {
-    background-color: var(--primary);
-    color: var(--text);
-    line-height: 1.6;
+  background: #121212;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+/* Neon headings */
+h1, h2 {
+  color: #00f3ff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 15px #00f3ff;
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
+/* Glowing button */
+.download-button {
+  background: transparent;
+  border: 2px solid #9d00ff;
+  color: #9d00ff;
+  padding: 12px 30px;
+  transition: all 0.3s;
 }
 
-.navbar a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s;
+.download-button:hover {
+  background: #9d00ff;
+  color: black;
+  box-shadow: 0 0 25px #9d00ff;
 }
 
-.navbar a:hover {
-    color: var(--accent);
-}
-
-.section {
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dark {
-    background-color: var(--secondary);
-}
-
-.highlight {
-    color: var(--accent);
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.progress-bar {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-top: 1rem;
-    border-radius: 2px;
-}
-
-.progress-bar::after {
-    content: '';
-    display: block;
-    width: 75%;
-    height: 100%;
-    background: var(--accent);
-    border-radius: 2px;
-}
-
-.social-links {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.social-links a {
-    color: var(--text);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.social-links a:hover {
-    background: var(--accent);
-    color: var(--primary);
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--secondary);
+/* Particle.js container (for animated background) */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
